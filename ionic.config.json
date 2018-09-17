@@ -1,0 +1,7 @@
+{
+  "name": "tCCApp.Gerencia",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
