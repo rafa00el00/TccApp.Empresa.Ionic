@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Detalhes Evento
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page2">
+  <form id="detalhesEvento-form1">
+    <ion-item id="detalhesEvento-input1">
+      <ion-label>
+        Titulo
+      </ion-label>
+      <ion-input type="text" placeholder="" [(ngModel)]="evento.titulo" name="evento.titulo"></ion-input>
+    </ion-item>
+    <ion-item id="detalhesEvento-textarea1">
+      <ion-label>
+        Descrição Simples(144caracteres)
+      </ion-label>
+      <ion-textarea placeholder="" [(ngModel)]="evento.descricaoSimples" name="evento.descricaoSimples"></ion-textarea>
+    </ion-item>
+    <ion-item id="detalhesEvento-textarea2">
+      <ion-label>
+        Descrição Evento
+      </ion-label>
+      <ion-textarea placeholder="" [(ngModel)]="evento.descricao" name="evento.descricao"></ion-textarea>
+    </ion-item>
+    <ion-item id="detalhesEvento-input3">
+      <ion-label>
+        Data Evento
+      </ion-label>
+      <ion-input type="date" placeholder="" [(ngModel)]="evento.dataEvento" name="evento.dataEvento"></ion-input>
+    </ion-item>
+    <ion-item id="detalhesEvento-input4">
+      <ion-label>
+        Publico Alvo
+      </ion-label>
+      <ion-input type="text" placeholder="" [(ngModel)]="evento.publicoAlvo" name="evento.publicoAlvo"></ion-input>
+    </ion-item>
+    <ion-item id="detalhesEvento-input5">
+      <ion-label>
+        Valor
+      </ion-label>
+      <ion-input type="number" placeholder="" [(ngModel)]="evento.valor" name="evento.valor"></ion-input>
+    </ion-item>
+  </form>
+  <button id="detalhesEvento-button2" ion-button outline color="balanced" block on-click="goToEventoAlterado()">
+    Alterar
+  </button>
+</ion-content>

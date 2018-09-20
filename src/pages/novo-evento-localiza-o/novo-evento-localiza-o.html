@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Novo Evento Localização
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page11">
+  <h3 id="novoEventoLocalizaO-heading10" style="color:#000000;text-align:center;">
+    Localização
+  </h3>
+  <form id="novoEventoLocalizaO-form8">
+    <ion-item id="novoEventoLocalizaO-input20">
+      <ion-label>
+        Cep
+      </ion-label>
+      <ion-input type="text" placeholder="" [(ngModel)]="evento.cep" name="evento.cep"></ion-input>
+    </ion-item>
+    <ion-item id="novoEventoLocalizaO-input21">
+      <ion-label>
+        Logradouro
+      </ion-label>
+      <ion-input type="text" placeholder="" [(ngModel)]="evento.logradouro" name="evento.logradouro"></ion-input>
+    </ion-item>
+    <ion-item id="novoEventoLocalizaO-input22">
+      <ion-label>
+        Numero
+      </ion-label>
+      <ion-input type="text" placeholder="" [(ngModel)]="evento.numero" name="evento.numero"></ion-input>
+    </ion-item>
+    <ion-item id="novoEventoLocalizaO-input23">
+      <ion-label>
+        Complemento
+      </ion-label>
+      <ion-input type="text" placeholder="" [(ngModel)]="evento.complemento" name="evento.complemento"></ion-input>
+    </ion-item>
+    <ion-item id="novoEventoLocalizaO-input24">
+      <ion-label>
+        Bairro
+      </ion-label>
+      <ion-input type="text" placeholder="" [(ngModel)]="evento.bairro" name="evento.bairro"></ion-input>
+    </ion-item>
+    <ion-item id="novoEventoLocalizaO-input25">
+      <ion-label>
+        Cidade
+      </ion-label>
+      <ion-input type="text" placeholder="" [(ngModel)]="evento.cidade" name="evento.cidade"></ion-input>
+    </ion-item>
+    <ion-item id="novoEventoLocalizaO-input26">
+      <ion-label>
+        UF
+      </ion-label>
+      <ion-input type="text" placeholder="" [(ngModel)]="evento.uF" name="evento.uF"></ion-input>
+    </ion-item>
+  </form>
+  <button id="novoEventoLocalizaO-button11" ion-button outline color="balanced" block on-click="goToNovoEventoDescrSimples()">
+    Continuar
+  </button>
+</ion-content>

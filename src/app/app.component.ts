@@ -1,14 +1,26 @@
-import { Component } from '@angular/core';
-import { Platform } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { Platform, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { EventosPage } from '../pages/eventos/eventos';
+import { DetalhesEventoPage } from '../pages/detalhes-evento/detalhes-evento';
+import { EventoAlteradoPage } from '../pages/evento-alterado/evento-alterado';
+import { FeedbackPage } from '../pages/feedback/feedback';
+import { LoginPage } from '../pages/login/login';
 import { HomePage } from '../pages/home/home';
+
+
+
+
+
+
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = HomePage;
+  @ViewChild(Nav) navCtrl: Nav;
+    rootPage:any = LoginPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
@@ -18,5 +30,17 @@ export class MyApp {
       splashScreen.hide();
     });
   }
+  goToEventos(params){
+    if (!params) params = {};
+    this.navCtrl.setRoot(EventosPage);
+  }goToDetalhesEvento(params){
+    if (!params) params = {};
+    this.navCtrl.setRoot(DetalhesEventoPage);
+  }goToEventoAlterado(params){
+    if (!params) params = {};
+    this.navCtrl.setRoot(EventoAlteradoPage);
+  }goToFeedback(params){
+    if (!params) params = {};
+    this.navCtrl.setRoot(FeedbackPage);
+  }
 }
-

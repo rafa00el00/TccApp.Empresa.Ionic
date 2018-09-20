@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Novo Evento
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page8">
+  <h2 id="novoEvento-heading7" style="color:#000000;text-align:center;">
+    Novo Evento
+  </h2>
+  <form id="novoEvento-form5">
+    <ion-item id="novoEvento-input16">
+      <ion-label>
+        Titulo
+      </ion-label>
+      <ion-input type="text" placeholder="" [(ngModel)]="evento.titulo" name="evento.titulo"></ion-input>
+    </ion-item>
+    <ion-item id="novoEvento-textarea3">
+      <ion-label>
+        Descrição completa
+      </ion-label>
+      <ion-textarea placeholder="" [(ngModel)]="evento.descricao" name="evento.descricao"></ion-textarea>
+    </ion-item>
+  </form>
+  <button id="novoEvento-button7" ion-button outline color="balanced" block on-click="goToNovoEventoTags()">
+    Continuar
+  </button>
+</ion-content>

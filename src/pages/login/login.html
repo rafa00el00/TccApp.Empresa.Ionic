@@ -1,0 +1,31 @@
+<ion-content padding style="background:url(assets/img/TjC46kRGRdawsDHW6DpP_samael-lopez-723379-unsplash.jpg) no-repeat center;background-size:cover;" id="page7">
+  <form id="login-form4">
+    <div class="spacer" style="width:300px;height:24px;" id="login-spacer4"></div>
+    <img src="assets/img/G99IA1EtTKakI0B7Ksdh_logos_xt.png" style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" />
+    <h4 id="login-heading6" style="color:#33CD5F;text-align:right;">
+      Empresa
+    </h4>
+    <div class="spacer" style="width:300px;height:86px;" id="login-spacer5"></div>
+    <ion-list id="login-list3">
+      <ion-item id="login-input14">
+        <ion-label>
+          Email
+        </ion-label>
+        <ion-input type="email" placeholder="" [(ngModel)]="login.email" name="login.email"></ion-input>
+      </ion-item>
+      <ion-item id="login-input15">
+        <ion-label>
+          Password
+        </ion-label>
+        <ion-input type="password" placeholder="" [(ngModel)]="login.password" name="login.password"></ion-input>
+      </ion-item>
+    </ion-list>
+    <div class="spacer" style="height:40px;" id="login-spacer3"></div>
+    <button id="login-button5" ion-button clear color="balanced" block on-click="DoLogin()">
+      Logar
+    </button>
+    <button id="login-button6" ion-button clear color="energized" block on-click="goToSignup()">
+      Registrar Empresa
+    </button>
+  </form>
+</ion-content>

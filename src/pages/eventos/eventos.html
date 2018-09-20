@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Eventos
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-left (click)="goToNovoEvento()">
+        <ion-icon name="add"></ion-icon>
+        Novo
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page1">
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+      </ion-refresher>
+  <h1 id="eventos-heading1" style="color:#000000;">
+    Eventos
+  </h1>
+  <ion-card id="eventos-card21" >
+    <ion-list>
+      
+      <ion-item id="eventos-list-item-container2">
+        <div id="eventos-markdown2" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;">
+            <strong>
+                {{evento.titulo}}
+            </strong>
+          </p>
+        </div>
+        <div id="eventos-markdown8" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;">
+              {{evento.dataEvento | date:"dd/MM/yyyy"}}
+          </p>
+        </div>
+        <div id="eventos-markdown9" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;">
+              {{evento.local}}
+          </p>
+        </div>
+      </ion-item>
+      <button id="eventos-button1" ion-button clear color="balanced" icon-left on-click="goToDetalhesEvento({codEvento: evento.id})">
+        <ion-icon name="add"></ion-icon>
+        Detalhes
+      </button>
+      <button id="eventos-button4" ion-button clear color="positive" icon-left on-click="goToFeedback({codEvento: evento.id})">
+        <ion-icon name="happy"></ion-icon>
+        Feedbacks
+      </button>
+    </ion-list>
+  </ion-card>
+</ion-content>

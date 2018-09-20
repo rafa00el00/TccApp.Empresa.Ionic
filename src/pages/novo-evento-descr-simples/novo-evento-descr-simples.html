@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Novo Evento Descr Simples
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page12">
+  <h3 id="novoEventoDescrSimples-heading11" style="color:#000000;text-align:center;">
+    Finalização
+  </h3>
+  <form id="novoEventoDescrSimples-form9">
+    <ion-item id="novoEventoDescrSimples-input27">
+      <ion-label>
+        Valor do Evento
+      </ion-label>
+      <ion-input type="text" placeholder="" [(ngModel)]="evento.valor" name="evento.valor"></ion-input>
+    </ion-item>
+    <ion-item id="novoEventoDescrSimples-input28">
+      <ion-label>
+        Data Evento
+      </ion-label>
+      <ion-input type="date" placeholder="" [(ngModel)]="evento.dataEvento" name="evento.dataEvento"></ion-input>
+    </ion-item>
+    <ion-item id="novoEventoDescrSimples-input29">
+      <ion-label>
+        Data Fim Inscrição
+      </ion-label>
+      <ion-input type="date" placeholder="" [(ngModel)]="evento.dataFimInscricao " name="evento.dataFimInscricao "></ion-input>
+    </ion-item>
+    <div id="novoEventoDescrSimples-markdown18" style="text-align:center;" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">
+        *Insira um descrição simplificada para aparecer ao usuario(144 caracteres)
+      </p>
+    </div>
+    <ion-item id="novoEventoDescrSimples-textarea4">
+      <ion-label>
+        Descrição Simples
+      </ion-label>
+      <ion-textarea placeholder="" [(ngModel)]="evento.descricaoSimples " name="evento.descricaoSimples "></ion-textarea>
+    </ion-item>
+    <button id="novoEventoDescrSimples-button12" ion-button outline color="balanced" block on-click="goToNovoEventoFinalizar()">
+      Continuar
+    </button>
+  </form>
+</ion-content>
