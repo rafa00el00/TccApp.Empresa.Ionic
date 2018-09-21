@@ -3,6 +3,7 @@ import { Injectable } from "@angular/core";
 import { Evento } from "../Models/evento";
 import { ReadPropExpr } from "@angular/compiler";
 import { JsonPipe } from "@angular/common";
+import { ViaCep } from "../Models/ViaCep.to";
 
 @Injectable()
 export class EventoNegocio{
@@ -32,8 +33,18 @@ export class EventoNegocio{
         public PostEvento(evento:Evento){
             return this._eventoService.PostEvento(evento)
             .then(resp =>{
+                return {ok:true, objeto: JSON.parse(resp.resp.data) };
+            })
+        }
+        public PutEvento(evento:Evento){
+            return this._eventoService.PutEvento(evento)
+            .then(resp =>{
                 return {ok:true, objeto: JSON.parse(resp.data) };
             })
+        }
+
+        public BuscarCep(cep):Promise<ViaCep>{
+            return this._eventoService.buscarCep(cep);
         }
 
 

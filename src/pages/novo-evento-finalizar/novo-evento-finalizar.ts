@@ -24,15 +24,16 @@ export class NovoEventoFinalizarPage {
   ) {
     this.evento = _navParams.get("evento");
   }
-  Concluir(){
+  async Concluir(){
     let load = this._loadingCtrl.create();
 
     load.present();
 
     try {
-      let resp = this._eventoNegocio.PostEvento(this.evento);
+      let resp =( await this._eventoNegocio.PostEvento(this.evento));
       if(resp.ok){
         this.goToNovoEventoSalvo(null);
+        load.dismiss();
         return;
       }else{
         this._alertCtrl.create({

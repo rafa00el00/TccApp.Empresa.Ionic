@@ -15,42 +15,41 @@
   <div id="novoEventoFinalizar-markdown20" style="text-align:center;" class="show-list-numbers-and-dots">
     <p style="color:#000000;">
       <strong>
-        Titulo
+        {{evento.nome}}
       </strong>
-      :
     </p>
   </div>
   <div id="novoEventoFinalizar-markdown21" class="show-list-numbers-and-dots">
     <p style="color:#000000;">
-      Descrição Simples
+      {{evento.descricaoSimples}}
     </p>
   </div>
   <div id="novoEventoFinalizar-markdown22" class="show-list-numbers-and-dots">
     <p style="color:#000000;">
-      dataEvento
+      {{evento.dataEvento | date:'dd/MM/yyyy'}}
     </p>
   </div>
   <div id="novoEventoFinalizar-markdown25" class="show-list-numbers-and-dots">
     <p style="color:#000000;">
-      valor
+      {{evento.valor | currency:'BRL'}}
     </p>
   </div>
   <div id="novoEventoFinalizar-markdown24" class="show-list-numbers-and-dots">
     <p style="color:#000000;">
-      publicoAlvo
+      {{evento.publicoAlvo}}
     </p>
   </div>
   <div id="novoEventoFinalizar-markdown26" class="show-list-numbers-and-dots">
     <p style="color:#000000;">
-      Local
+      {{evento.cep}}, {{evento.logradouro}}, {{evento.numero}}
     </p>
   </div>
   <div id="novoEventoFinalizar-markdown23" class="show-list-numbers-and-dots">
     <p style="color:#000000;">
-      Descricao
+      {{evento.descricao}}
     </p>
   </div>
-  <button id="novoEventoFinalizar-button13" ion-button clear color="balanced" block on-click="goToNovoEventoSalvo()">
+  <button id="novoEventoFinalizar-button13" ion-button clear color="balanced" block on-click="Concluir()">
     Finalizar
   </button>
 </ion-content>

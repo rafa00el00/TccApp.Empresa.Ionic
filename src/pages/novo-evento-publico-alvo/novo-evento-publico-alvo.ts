@@ -37,6 +37,7 @@ export class NovoEventoPublicoAlvoPage implements OnInit {
     try {
       this.TagsList = (await this._eventoNegocio.GetPublicoAlvoRecomendacao(this.evento.tags));
     } catch (error) {
+      console.error(error);
       
     }
     load.dismiss();

@@ -31,8 +31,8 @@
     </p>
   </div>
   <ion-list id="novoEventoPublicoAlvo-list4">
-    <ion-item color="none" id="novoEventoPublicoAlvo-list-item12">
-      Sugestão 1
+    <ion-item color="none" id="novoEventoPublicoAlvo-list-item12" *ngFor="let tag of TagsList">
+      {{tag}}
     </ion-item>
   </ion-list>
 </ion-content>

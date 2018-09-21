@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController, LoadingController, AlertController, NavParams } from 'ionic-angular';
+import { NavController, LoadingController, AlertController, NavParams, Toggle } from 'ionic-angular';
 import { NovoEventoPublicoAlvoPage } from '../novo-evento-publico-alvo/novo-evento-publico-alvo';
 import { NovoEventoLocalizaOPage } from '../novo-evento-localiza-o/novo-evento-localiza-o';
 import { NovoEventoDescrSimplesPage } from '../novo-evento-descr-simples/novo-evento-descr-simples';
@@ -18,7 +18,7 @@ import { Evento } from '../../Negocio/Models/evento';
 })
 export class NovoEventoTagsPage implements OnInit {
   
-
+  TagEvento:string;
   TagsList:Array<string>;
   evento:Evento;
   constructor(
@@ -37,11 +37,32 @@ export class NovoEventoTagsPage implements OnInit {
 
     try {
       this.TagsList = (await this._eventoNegocio.GetTagsFromText(this.evento.descricao));
+      this.evento.tags = this.TagsList;
     } catch (error) {
-      
+      console.error(error);
+       
     }
     load.dismiss();
   }
+
+  addTagItem(){
+    if(this.TagEvento){
+      this.TagsList.splice(0,0,this.TagEvento);
+      this.TagEvento = "";
+    }
+  }
+
+  changeList(toggle: Toggle,item){
+
+    if(toggle.value){
+      this.evento.tags.push(item);
+    }else{
+      let i = this.evento.tags.indexOf(item);
+      this.evento.tags.splice(i,1);
+    }
+  }
+
+
 
   goToNovoEventoPublicoAlvo(params){
     if (!params) params = {evento: this.evento};

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { EventosPage } from '../eventos/eventos';
 
 @Component({
   selector: 'page-evento-alterado',
@@ -8,6 +9,11 @@ import { NavController } from 'ionic-angular';
 export class EventoAlteradoPage {
 
   constructor(public navCtrl: NavController) {
+  }
+
+  goToEventos(params){
+    if (!params) params = {};
+    this.navCtrl.push(EventosPage);
   }
   
 }

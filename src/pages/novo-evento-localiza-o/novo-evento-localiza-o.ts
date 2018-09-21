@@ -26,6 +26,20 @@ export class NovoEventoLocalizaOPage {
   ) {
     this.evento = _navParams.get("evento");
   }
+
+  async buscarCep(){
+    if(this.evento.cep){
+      let load = this._loadingCtrl.create();
+      load.present();
+      var cepResp = (await this._eventoNegocio.BuscarCep(this.evento.cep));
+      this.evento.logradouro = cepResp.logradouro;
+      this.evento.cidade = cepResp.localidade;
+      this.evento.bairro = cepResp.bairro;
+      this.evento.uF = cepResp.uf;
+      load.dismiss();
+    }
+  }
+
   goToNovoEventoDescrSimples(params){
     if (!params) params = {evento: this.evento};
     this.navCtrl.push(NovoEventoDescrSimplesPage,params);

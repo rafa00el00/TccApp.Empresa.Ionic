@@ -17,7 +17,7 @@
       <ion-label>
         Cep
       </ion-label>
-      <ion-input type="text" placeholder="" [(ngModel)]="evento.cep" name="evento.cep"></ion-input>
+      <ion-input type="number" (focusout)="buscarCep()" placeholder="" [(ngModel)]="evento.cep" name="evento.cep"></ion-input>
     </ion-item>
     <ion-item id="novoEventoLocalizaO-input21">
       <ion-label>

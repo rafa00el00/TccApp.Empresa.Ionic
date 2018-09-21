@@ -14,7 +14,7 @@
       <ion-label>
         Titulo
       </ion-label>
-      <ion-input type="text" placeholder="" [(ngModel)]="evento.titulo" name="evento.titulo"></ion-input>
+      <ion-input type="text" placeholder="" [(ngModel)]="evento.nome" name="evento.nome"></ion-input>
     </ion-item>
     <ion-item id="detalhesEvento-textarea1">
       <ion-label>
@@ -47,7 +47,7 @@
       <ion-input type="number" placeholder="" [(ngModel)]="evento.valor" name="evento.valor"></ion-input>
     </ion-item>
   </form>
-  <button id="detalhesEvento-button2" ion-button outline color="balanced" block on-click="goToEventoAlterado()">
+  <button id="detalhesEvento-button2" ion-button outline color="balanced" block on-click="AlterarEvento()">
     Alterar
   </button>
 </ion-content>

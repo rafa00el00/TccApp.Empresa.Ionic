@@ -1,11 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, LoadingController, AlertController } from 'ionic-angular';
 import { EventosPage } from '../eventos/eventos';
-import { DetalhesEventoPage } from '../detalhes-evento/detalhes-evento';
-import { EventoAlteradoPage } from '../evento-alterado/evento-alterado';
-import { FeedbackPage } from '../feedback/feedback';
 import { SignupPage } from '../signup/signup';
-import { EmpresaCadastradaPage } from '../empresa-cadastrada/empresa-cadastrada';
 import { LoginTo } from '../../Negocio/Models/login.to';
 import { AuthNegocio } from '../../Negocio/BO/auth.negocio';
 
@@ -23,6 +19,8 @@ export class LoginPage {
     private dialog: AlertController,
   ) {
     this.login = new LoginTo();
+    this.login.email = "teste.rafa@grr.la";
+    this.login.password = "Teste@123";
   }
 
   goToEventos(params){

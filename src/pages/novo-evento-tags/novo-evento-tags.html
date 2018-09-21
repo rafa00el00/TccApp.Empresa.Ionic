@@ -17,22 +17,16 @@
       <ion-label>
         Tag
       </ion-label>
-      <ion-input type="text" placeholder="" name="tag"></ion-input>
+      <ion-input type="text" placeholder="" name="TagEvento" [(ngModel)]="TagEvento" ></ion-input>
     </ion-item>
-    <button id="novoEventoTags-button8" ion-button outline color="balanced" block>
+    <button id="novoEventoTags-button8" (click)="addTagItem()" ion-button outline color="balanced" block>
       Adicionar
     </button>
-    <ion-item id="novoEventoTags-checkbox1">
+    <ion-item id="novoEventoTags-checkbox1" *ngFor="let tag of TagsList">
       <ion-label>
-        Tag1
+        {{tag}}
       </ion-label>
-      <ion-checkbox></ion-checkbox>
-    </ion-item>
-    <ion-item id="novoEventoTags-checkbox2">
-      <ion-label>
-        Tag2
-      </ion-label>
-      <ion-checkbox></ion-checkbox>
+      <ion-checkbox (ionChange)="changeList($event, tag)" checked></ion-checkbox>
     </ion-item>
   </form>
   <button id="novoEventoTags-button9" ion-button outline color="balanced" block on-click="goToNovoEventoPublicoAlvo()">

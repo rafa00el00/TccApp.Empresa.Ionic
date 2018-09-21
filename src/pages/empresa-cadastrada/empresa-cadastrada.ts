@@ -9,5 +9,9 @@ export class EmpresaCadastradaPage {
 
   constructor(public navCtrl: NavController) {
   }
+
+  Voltar(){
+    this.navCtrl.goToRoot(null);
+  }
   
 }
