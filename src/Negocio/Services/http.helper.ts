@@ -6,7 +6,8 @@ import { SharedService } from "../Shared.service";
 @Injectable()
 export class HttpHelper {
 
-    public baseUrl: string = "http://192.168.137.1:5000/api";
+    // public baseUrl: string = "http://192.168.137.1:5000/api";
+    public baseUrl: string = "http://35.209.113.69/api";
     constructor(
         private http: HTTP
     ) {

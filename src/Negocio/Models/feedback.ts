@@ -1,5 +1,6 @@
 export class Feedback{
 
-    public status:string;
-    public comentario:string;
+    public rate:number;
+    public mensagem:string;
+    public codEvento:string;
 }
