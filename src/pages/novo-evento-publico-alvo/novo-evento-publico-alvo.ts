@@ -42,6 +42,10 @@ export class NovoEventoPublicoAlvoPage implements OnInit {
     }
     load.dismiss();
   }
+
+  SelecionarPublicoAlvo(tag){
+    this.evento.publicoAlvo = tag; 
+  }
   
   goToNovoEventoLocalizaO(params){
     if (!params) params = {evento: this.evento};

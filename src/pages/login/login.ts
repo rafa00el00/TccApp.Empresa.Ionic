@@ -20,7 +20,7 @@ export class LoginPage {
   ) {
     this.login = new LoginTo();
     this.login.email = "teste.rafa@grr.la";
-    this.login.password = "Teste@123";
+    this.login.password = "Paicon@123";
   }
 
   goToEventos(params){

@@ -17,7 +17,10 @@ export class FeedbackService {
 
     public GetFeedBackPorEvento(codEvento: number) {
         return this.http.Get(this.baseUrl + "/Evento/" + codEvento)
-            .then(r => JSON.parse(r.data));
+            .then(r => {
+                console.log(r);
+                return JSON.parse(r.data)
+            });
     }
     public GetFeedbackUsuarioEvento(codEvento: number) {
         return this.http.Get(this.baseUrl + "/Usuario/" + codEvento)
